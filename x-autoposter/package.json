@@ -1,0 +1,24 @@
+{
+  "name": "x-autoposter",
+  "version": "1.0.0",
+  "description": "Draft-first X/Twitter posting system with Claude-generated drafts, scheduling, and FTC-compliant affiliate tagging.",
+  "type": "module",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "post": "node post.js",
+    "generate": "node generate-drafts.js",
+    "scheduler": "node scheduler.js",
+    "shadowban": "node check-shadowban.js",
+    "stats": "node stats.js",
+    "from-article": "node generate-from-articles.js"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.32.1",
+    "dotenv": "^16.4.5",
+    "gray-matter": "^4.0.3",
+    "luxon": "^3.5.0",
+    "twitter-api-v2": "^1.18.2"
+  }
+}

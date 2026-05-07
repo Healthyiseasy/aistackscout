@@ -1,0 +1,9 @@
+node_modules/
+.env
+.env.local
+post_log.json
+posted/
+!posted/.gitkeep
+drafts/*.md
+!drafts/.gitkeep
+.DS_Store

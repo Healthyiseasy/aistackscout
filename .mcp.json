@@ -1,0 +1,15 @@
+{
+  "mcpServers": {
+    "aistackscout": {
+      "type": "http",
+      "url": "https://aistackscout.com/wp-json/mcp/v1/http",
+      "headers": {
+        "Authorization": "Bearer c19039ef14714fa8dc29f8f6341495a747f4af765d3845c9eb15d90539da74ff"
+      }
+    },
+    "beehiiv": {
+      "type": "http",
+      "url": "https://mcp.beehiiv.com/mcp"
+    }
+  }
+}

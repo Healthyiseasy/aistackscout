@@ -1,0 +1,61 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(claude mcp:*)",
+      "mcp__aistackscout__wp_get_post_snapshot",
+      "mcp__aistackscout__wp_update_post",
+      "mcp__aistackscout__wp_get_posts",
+      "mcp__aistackscout__wp_get_terms",
+      "mcp__aistackscout__wp_get_post_terms",
+      "mcp__aistackscout__wp_get_media",
+      "mcp__aistackscout__wp_set_featured_image",
+      "mcp__aistackscout__wp_get_post",
+      "mcp__aistackscout__wp_get_option",
+      "mcp__aistackscout__wp_update_option",
+      "mcp__aistackscout__wp_alter_post",
+      "mcp__aistackscout__wp_update_post_meta",
+      "mcp__aistackscout__wp_list_plugins",
+      "mcp__aistackscout__wp_create_post",
+      "mcp__aistackscout__wp_delete_post",
+      "mcp__aistackscout__wp_add_post_terms",
+      "mcp__aistackscout__wp_get_post_types",
+      "WebFetch(domain:close.com)",
+      "WebFetch(domain:www.pipedrive.com)",
+      "WebFetch(domain:www.freshworks.com)",
+      "WebFetch(domain:www.hubspot.com)",
+      "mcp__aistackscout__mwai_vision",
+      "Bash(curl:*)",
+      "mcp__aistackscout__wp_update_media",
+      "mcp__aistackscout__wp_get_post_meta",
+      "mcp__aistackscout__mwai_image",
+      "Bash(node *)",
+      "Bash(launchctl list *)",
+      "Bash(crontab -l)",
+      "Bash(npm run *)",
+      "WebSearch",
+      "WebFetch(domain:developers.openai.com)",
+      "WebFetch(domain:www.anthropic.com)",
+      "WebFetch(domain:claude.com)",
+      "WebFetch(domain:www.cursor.com)",
+      "WebFetch(domain:lovable.dev)",
+      "Bash(python3 -c ' *)",
+      "Skill(update-config)"
+    ]
+  },
+  "enableAllProjectMcpServers": true,
+  "enabledMcpjsonServers": [
+    "aistackscout"
+  ],
+  "hooks": {
+    "SessionStart": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "cmds=$(find \"$CLAUDE_PROJECT_DIR/.claude/commands\" -maxdepth 1 -name '*.md' -type f 2>/dev/null | while read f; do basename \"$f\" .md; done | sort | sed 's|^|/|' | tr '\\n' '|' | sed 's/|$//; s/|/, /g'); if [ -z \"$cmds\" ]; then msg=\"No slash commands found in .claude/commands/. Relaunch Claude Code from the aistackscout project root: claude\"; else msg=\"Slash commands loaded from .claude/commands/: $cmds\"; fi; jq -n --arg msg \"$msg\" '{hookSpecificOutput: {hookEventName: \"SessionStart\", additionalContext: $msg}}'"
+          }
+        ]
+      }
+    ]
+  }
+}

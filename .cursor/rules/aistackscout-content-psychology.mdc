@@ -1,0 +1,40 @@
+---
+description: AIStackScout editorial psychology — voice, structure, conversion (see psychology.md)
+alwaysApply: true
+---
+
+# AIStackScout content (canonical spec: `psychology.md`)
+
+## Reader
+
+Owner/CEO, 1–100 employees. Skeptical, time-poor, burned by hype. Wants peer advice, not a pitch. Responds to loss framing, peer-sized proof, and concrete ROI. Ignores feature lists; cares about outcomes.
+
+## Every article
+
+1. **Pain-first:** Pain → cost of inaction → criteria → solution → verdict.
+2. **Loss over gain:** Lead with what they lose by waiting; avoid “helps you grow” without stakes.
+3. **So-what filter:** Every claim ties to their business (time, dollars, headcount).
+4. **Max 4 tools** with real pricing, one honest weakness each, **one clear winner.** End comparisons with: **Bottom line: if you pick one, pick [X].**
+5. **Authority via honesty:** Say what it does, costs, delivers, and where it falls short. No promotional tone.
+6. **Price anchor** before tool price (e.g. FTE cost vs. subscription).
+7. **Commitment before the ask:** Small yeses early; CTA after trust.
+8. **Scarcity only when real** — never fake urgency.
+9. **Affiliate:** Link only after the verdict feels honest; disclose always.
+
+## Structure
+
+- **Headline:** outcome or loss — not the tool name first.
+- **Hook:** two sentences — pain + understood.
+- **BLUF:** conclusion before the full argument.
+- **Criteria:** what to require in this category.
+- **Reviews:** ≤4 tools, pricing, weakness each.
+- **Clear winner:** named.
+- **CTA:** one action, one link.
+
+## Banned words
+
+Never: amazing, powerful, game-changing, revolutionary, cutting-edge, robust, seamless, leverage, unlock, supercharge.
+
+Prefer: specific numbers, real pricing, time/dollars saved, headcount impact, honest weaknesses.
+
+**Tone:** trusted peer. Direct, no fluff.

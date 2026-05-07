@@ -1,0 +1,55 @@
+# === macOS ===
+.DS_Store
+._*
+Thumbs.db
+
+# === Secrets — NEVER commit ===
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+secrets/
+credentials/
+tokens/
+
+# === Editor / IDE ===
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# === Node ===
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# === Python ===
+__pycache__/
+*.pyc
+venv/
+.venv/
+
+# === Logs ===
+*.log
+logs/
+
+# === Claude Code internals ===
+.claude/cache/
+.claude/sessions/
+.claude/*.log
+
+# === Cursor internals ===
+.cursor/cache/
+.cursor/logs/
+
+# === Backups & temp ===
+*.bak
+*.tmp
+.Trash/
+
+# === Build artifacts ===
+dist/
+build/

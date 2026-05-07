@@ -1,0 +1,17 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm install:*)",
+      "Bash(node --check post.js)",
+      "Bash(node --check scheduler.js)",
+      "Bash(node --check generate-drafts.js)",
+      "Bash(node --check check-shadowban.js)",
+      "Bash(node --check stats.js)",
+      "Bash(node:*)",
+      "Bash(cat)",
+      "Bash(cp /tmp/smoke-draft.md drafts/smoke-test.md)",
+      "Bash(npm run:*)",
+      "Skill(claude-api)"
+    ]
+  }
+}

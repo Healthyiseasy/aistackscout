@@ -39,7 +39,8 @@
       "WebFetch(domain:www.cursor.com)",
       "WebFetch(domain:lovable.dev)",
       "Bash(python3 -c ' *)",
-      "Skill(update-config)"
+      "Skill(update-config)",
+      "mcp__aistackscout__wp_upload_request"
     ]
   },
   "enableAllProjectMcpServers": true,

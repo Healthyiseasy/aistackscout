@@ -2,13 +2,31 @@
 
 ## Apply these rules to every article, every time, no exceptions.
 
+## RULE 0 — /go/ Pretty Links Are Conditional On Approval
+
+**A `/go/<slug>` Pretty Link may only be created and used for a tool that appears in `.claude/rules/approved-affiliates.md` as an APPROVED program.**
+
+For tools without an approved affiliate program:
+- Link directly to the tool's homepage (no `/go/` wrapper)
+- Do NOT create a Pretty Link
+- Do NOT add the inline `(aff)` marker
+- Do NOT include affiliate disclosure language for that tool
+
+When drafting any article:
+1. Check `.claude/rules/approved-affiliates.md` against every tool you plan to feature. If the master list isn't sufficient or you're unsure, ask the user which tools have approved affiliate programs before drafting.
+2. For approved tools: use `/go/<slug>` Pretty Link + `(aff)` marker + standard disclosure.
+3. For non-approved tools: direct homepage link only. Treat the tool exactly like a non-affiliated reference.
+4. The single article CTA must point to an approved tool. If none of the featured tools are approved, replace the tool CTA with an internal action (newsletter, related article) and suppress the FTC disclosure block via the `_suppress_ftc_disclosure` post meta (set value `1`).
+
+The master list at `.claude/rules/approved-affiliates.md` is the single source of truth. Currently empty (no approved programs yet) — assume zero affiliate links until the list is populated.
+
 ## DO — Every Article Must Have
-- FTC disclosure at the very top of every post (handled by Code Snippets hook automatically)
+- FTC disclosure at the very top of every post (handled by Code Snippets hook automatically) — but ONLY when the post actually contains an approved affiliate link. Suppress via `_suppress_ftc_disclosure` meta when no approved-tool links are present.
 - Affiliate Disclosure page linked in footer — /affiliate-disclosure/
-- Affiliate links cloaked through Pretty Links — never raw affiliate URLs
+- Affiliate links cloaked through Pretty Links — never raw affiliate URLs (and only for approved tools per Rule 0)
 - One honest weakness per tool reviewed — never all positive
 - Clear winner stated — never hedge with "it depends"
-- Single CTA at the end — one link, one action, affiliate disclosure noted
+- Single CTA at the end — one link, one action, affiliate disclosure noted (CTA target must be an approved tool, or an internal action if none qualify)
 - Internal links to 2–3 existing articles
 - Real 2026 pricing — never vague or outdated
 - Rank Math focus keyword set before publishing

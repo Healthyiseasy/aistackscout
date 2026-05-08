@@ -53,3 +53,4 @@ logs/
 # === Build artifacts ===
 dist/
 build/
+.mcp.json

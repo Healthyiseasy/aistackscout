@@ -54,3 +54,17 @@ Each blocker maps to a documented audit failure or compliance rule. They protect
 3. **Affiliate program rules** — never click `/go/` links to test them; verify slug existence via DB or admin only.
 
 If a check is impossible to perform from the available tooling, mark the post as **NOT READY** and escalate. Never publish on the assumption that an unverifiable check passes.
+
+---
+
+## FTC AUTO-FLIP RULE (Added 2026-05-13)
+
+Hard pre-publish check. Run before any wp_create_post or wp_update_post call.
+
+RULE 1: If post body contains "/go/" OR "(aff)" anywhere in HTML, _suppress_ftc_disclosure MUST equal 0 in post meta. FTC disclosure block must render.
+
+RULE 2: If post body contains NO "/go/" AND NO "(aff)" anywhere in HTML, _suppress_ftc_disclosure MUST equal 1 in post meta. No disclosure block (no material connection exists).
+
+RULE 3: When retrofitting an existing article with affiliate links (swapping direct URLs for /go/ slugs), the SAME call must flip _suppress_ftc_disclosure from 1 to 0. Never leave an article with affiliate links AND suppressed disclosure.
+
+VIOLATION HANDLING: If detected, STOP and tell Mr. Rubio which article violates which rule. Do not publish, do not update, until resolved.

@@ -26,7 +26,7 @@ The full spec lives in `.cursor/rules/aistackscout-content-psychology.mdc`. Key 
 
 ## Content Generation — Proof Format Rotation
 
-All content generation tasks (Twitter, newsletters, articles, LinkedIn) must follow the **Proof Format Rotation Rule** in `.claude/rules/psychology.md`. Key constraint: max 1 peer-story opener ("A CEO I know...", "An exec I drove...") per week on Twitter, per article, and per newsletter issue. Audit the last 7 days before generating any batch. Rotate across 5 proof formats: peer story, numbers-first stat, contrarian observation, pattern call-out, challenge/question hook.
+All content generation tasks (Twitter, newsletters, articles, LinkedIn) must follow the **Proof Format Rotation Rule** in `.claude/rules/psychology.md`. Key constraints: Twitter — peer-story openers are permanently banned. Not allowed even 1x per week. Educator voice only. Articles and newsletter issues — max 1 peer-story opener ("A CEO I know...", "An exec I drove...") per article and per newsletter issue. Audit the last 7 days before generating any batch. Rotate across 5 proof formats: peer story, numbers-first stat, contrarian observation, pattern call-out, challenge/question hook.
 
 ## Content Generation — Article Pattern Break
 

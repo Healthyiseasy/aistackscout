@@ -20,8 +20,8 @@ The full spec lives in `.cursor/rules/aistackscout-content-psychology.mdc`. Key 
 - **Every claim must pass the so-what filter:** tie to time, dollars, or headcount.
 - **Honesty as authority:** Real pricing, one genuine weakness per tool, no promotional tone.
 - **Price anchor:** Compare tool cost against an FTE or existing spend before showing the price.
-- **End every comparison with:** "Bottom line: if you pick one, pick [X]."
-- **Banned words:** amazing, powerful, game-changing, revolutionary, cutting-edge, robust, seamless, leverage, unlock, supercharge.
+- **Comparison closer:** rotate across the psychology.md closer pool. Never use the same phrase as the previous article. "Bottom line: if you pick one, pick X" is allowed but not mandatory; pattern-break audit governs each article.
+- **Banned words:** amazing, powerful, game-changing, revolutionary, cutting-edge, robust, seamless, leverage, unlock, supercharge, delve, navigating the landscape.
 - **Tone:** Trusted peer. Direct, no fluff.
 
 ## Content Generation — Proof Format Rotation
@@ -49,7 +49,7 @@ Before drafting any article, follow the **Article Pattern Break Rule** in `.clau
 
 Canonical version with verification commands lives in `.claude/rules/pre-publish-blockers.md`. Quick reference:
 
-- **Rank Math meta description** present, 120–165 chars, contains focus keyword
+- **Rank Math meta description** present, 155–165 chars, contains focus keyword
 - **Page H1 verified** via `curl | grep '<h1'` — exactly one `<h1 class="entry-title">` containing the post title (the theme provides this; do NOT add a second H1 in `post_content`)
 - **Inline (aff) marker** on every affiliate anchor link (in addition to the top-of-post block disclosure)
 - **Featured image alt text** present and descriptive

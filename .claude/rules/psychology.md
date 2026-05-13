@@ -47,7 +47,7 @@ Only use when real — limited pricing, deadlines, deprecations.
 
 ### 8. Max 4 Tools Per Article
 Always give a clear winner. Never hedge.
-End every comparison with: "Bottom line: if you pick one, pick X."
+Comparison closer rotation: pick from the closer pool in the Article Pattern Break Rule below. Never repeat the previous article's closer. "Bottom line: if you pick one, pick X" is allowed but not mandatory; pattern-break audit governs each article.
 
 ### 9. Pain-First Structure
 Every article: Pain → Cost of inaction → Criteria → Solution → Verdict
@@ -69,7 +69,8 @@ Every article: Pain → Cost of inaction → Criteria → Solution → Verdict
 ## Language Rules
 
 NEVER USE: amazing, powerful, game-changing, revolutionary,
-cutting-edge, robust, seamless, leverage, unlock, supercharge.
+cutting-edge, robust, seamless, leverage, unlock, supercharge,
+delve, navigating the landscape.
 
 ALWAYS USE: specific numbers, real pricing, time saved,
 dollars saved, headcount impact, honest weaknesses.

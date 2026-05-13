@@ -5,7 +5,7 @@ Before publishing ANY article, run through this checklist. Each item is a blocke
 ## Blockers
 
 0. **Title length and structure (HARD REJECT).** `post_title` must be **≤ 60 characters** AND must read as **one complete thought**, not two stitched-together sentences. If the title exceeds 60 characters, or contains more than one sentence-ending punctuation mark (`.`, `!`, `?`) before the final character, the validator REJECTS the post before save. **Always show the proposed title to the user for approval before any `wp_create_post` call.**
-1. **Rank Math meta description** present, 120–165 chars, contains the focus keyword once.
+1. **Rank Math meta description** present, 155–165 chars, contains the focus keyword once.
 2. **In-body H1** strategy is correct for the active theme:
    - The theme renders `post_title` as the page `<h1 class="entry-title">`. Do **not** add a second H1 inside `post_content`.
    - Body content must start at H2.

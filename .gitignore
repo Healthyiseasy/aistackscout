@@ -54,3 +54,7 @@ logs/
 dist/
 build/
 .mcp.json
+
+# === AIStackScout content / per-machine ===
+drafts/
+.claude/settings.local.json

@@ -43,7 +43,7 @@ Tweet 3 (6pm MT) - DECISION QUESTION
 AUTO-PLUG REPLIES (one per tweet):
 For each of the 3 tweets, draft a reply Mr. Rubio will post AS A REPLY to his own tweet once the original hits 20 plus engagements. This avoids the link-suppression penalty.
 Format: One sentence value tease plus newsletter link
-Example: If you want more like this, my weekly newsletter breaks down 4 AI tools per issue with honest weakness for each. Join 2 subscribers and growing: https://aistackscout.beehiiv.com
+Example: If you want this without the search — weekly issue breaks down 4 AI tools with honest weaknesses called out. https://aistackscout.beehiiv.com
 
 5 DAILY REPLY TARGETS:
 Identify 5 X accounts Mr. Rubio should reply to today. Criteria:
@@ -102,6 +102,7 @@ After saving the file to drafts/tweets/YYYY-MM-DD.md, use Gmail MCP (mcp__claude
 NEVER:
 - Use hashtags
 - Use peer-story openers in any post
+- Reveal subscriber count below 1,000 anywhere in tweets, replies, or auto-plug language. Use credibility-neutral framing or identity framing ("smart operators") instead.
 - Use generic closers like Thoughts or What do you think
 - Include /go/ links or (aff) markers
 - Output without character count audit

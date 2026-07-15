@@ -12,5 +12,5 @@ Usage: /publish-post [post ID or title]
 10. Follow link-validation.md — verify all links are real before publishing.
 11. Minimum 1500 words. Set the Rank Math focus keyword.
 12. Before publishing, use the aistackscout MCP to search the WordPress media library for a relevant featured image. If one exists, attach it to the post. If none exists, flag it and do NOT publish — instead report: "No featured image found. Upload one to Media Library and re-run." Never publish a post without a featured image.
-13. If the article contains zero approved-tool affiliate links, set the `_suppress_ftc_disclosure` post meta to `1` so the auto-injected FTC block doesn't fire on a non-affiliate post.
+13. Do not set any FTC-disclosure suppression meta. The FTC disclosure block uses always-accurate wording ("AIStackScout is reader-supported. Some of our articles contain affiliate links...") and displays on every post automatically via the Code Snippets hook — it is correct whether or not the post contains affiliate links.
 14. Publish. Report the post title and live URL when done.

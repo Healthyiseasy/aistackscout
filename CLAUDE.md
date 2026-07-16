@@ -34,16 +34,20 @@ Before drafting any article, follow the **Article Pattern Break Rule** in `.clau
 
 ## Article Template
 
-`templates/article.md` is the scaffold for every article. Follow it exactly:
+`templates/article.md` is the scaffold for every article. The stages below are **internal scaffolding** — they describe what each section must accomplish. They are **NOT** literal headings:
 
 1. Headline (outcome or loss — never lead with tool name)
-2. Hook (2 sentences: pain + empathy)
-3. Bottom line up front (verdict before the argument)
-4. What this is costing you (loss framing with specifics)
-5. What to look for before you buy (criteria linked to outcomes)
-6. Reviews (max 4 tools, each with real pricing + honest weakness)
-7. Clear winner (named, no hedging)
-8. Next step (one action, one link, disclosure)
+2. Hook (2 sentences: pain + empathy) — **no heading; opening prose**
+3. Bottom line up front (verdict before the argument) — **no heading; continues the opening prose**
+4. What this is costing you (loss framing) — **a descriptive, pain-specific H2, not this label**
+5. What to look for before you buy (criteria) — **a descriptive H2, not this label**
+6. Reviews (max 4 tools, real pricing + honest weakness) — **each tool's H3 is the tool name, not "Reviews"**
+7. Clear winner (named, no hedging) — **a descriptive verdict H2, not "Clear winner"**
+8. Next step (one action, one link, disclosure) — **no heading; closing prose**
+
+### NO SCAFFOLDING LABELS IN OUTPUT (hard rule)
+
+Never emit the stage names above (Hook, Bottom line up front, What this is costing you, Criteria, Reviews, Clear winner, Next step, Tool A/B/C/D) as literal `H2`/`H3` headings in published `post_content`. They were leaking into live posts as headings — that is a hard reject. Full rule and the descriptive-heading guidance live in `.claude/rules/article-writer.md`; it is enforced as pre-publish blocker 9 in `.claude/rules/pre-publish-blockers.md`.
 
 ## Pre-Publish Blockers — REJECT publish if any are missing
 

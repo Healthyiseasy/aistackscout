@@ -16,6 +16,7 @@ Before publishing ANY article, run through this checklist. Each item is a blocke
 6. **All `/go/` links** use absolute URLs (`https://aistackscout.com/go/<slug>`), never relative.
 7. **Every `/go/` slug exists** in Pretty Links and resolves to a non-empty target URL. Never test-click an affiliate link — verify via the Pretty Links admin or DB read.
 8. **Rank Math focus keyword** is set and appears in: post title, slug, meta description, and the first H2.
+9. **No scaffolding labels as headings, and no fabricated first-hand testing.** `post_content` must not contain any scaffold stage name as a literal heading — `Hook`, `Bottom line up front`, `BLUF`, `What this is costing you`, `What to look for before you buy`, `Criteria`, `Reviews`, `Tool A/B/C/D`, `Clear winner`, `Next step`. It must also contain no unsubstantiated first-hand testing claims — `I tested`, `we tested`, `in our testing`, `we used it for`, `we ran`, `hands-on`. Full rule: `.claude/rules/article-writer.md`. Verify: `curl -s "$URL" | grep -oiE '<h[23][^>]*>(hook|bottom line|clear winner|reviews|next step|what this is costing|what to look for)[^<]*</h[23]>'` (must return nothing) and `curl -s "$URL" | grep -oiE 'we tested|i tested|in our testing|we used it for|we ran both|hands-on'` (must return nothing).
 
 ## How to verify before publish
 

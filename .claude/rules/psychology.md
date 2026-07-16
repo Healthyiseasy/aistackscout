@@ -56,13 +56,15 @@ Every article: Pain → Cost of inaction → Criteria → Solution → Verdict
 
 ## Article Structure
 
+These are internal **stages**, not output headings. Never print the stage names (Hook, Bottom Line Up Front, Criteria, Reviews, Clear Winner, CTA) as literal H2/H3 text — see `.claude/rules/article-writer.md`. Hook + BLUF run as opening prose with no heading; body sections get descriptive, pain-specific headings; each tool's heading is its own name.
+
 - Headline: outcome or loss — never lead with the tool name
-- Hook: 2 sentences — state the pain, make them feel understood
-- Bottom Line Up Front: conclusion before the argument
-- Criteria: what to look for before buying in this category
-- Reviews: max 4 tools, real pricing, one honest weakness each
-- Clear Winner: always pick one
-- CTA: one action, one link, no options
+- Hook: 2 sentences — state the pain, make them feel understood (no heading)
+- Bottom Line Up Front: conclusion before the argument (no heading)
+- Criteria: what to look for before buying in this category (descriptive H2)
+- Reviews: max 4 tools, real pricing, one honest weakness each (tool name is the heading)
+- Clear Winner: always pick one (descriptive H2)
+- CTA: one action, one link, no options (no heading)
 
 ---
 
@@ -99,7 +101,7 @@ credibility with skeptical owners, not suspicion.
 ### Click Psychology (Articles + Emails)
 - One primary CTA per piece — never dilute with competing links
 - "Give give give ask" pattern: 3 value points before 1 affiliate link
-- Frame as personal recommendation: "I tested this" not "check this out"
+- Frame as a reasoned pick, NOT a personal test: "the better fit for a team your size" — never fabricate first-hand testing ("I tested this", "in our testing"). Ground claims in the tool's documentation and public user reports. FTC: unsubstantiated first-hand claims are a compliance risk (see `.claude/rules/article-writer.md`).
 - Specific outcomes: "saves 5 hours/week" not "improves productivity"
 - Anchor high then reveal: "Consultants charge $300/hr for this. This tool does it for $49/mo."
 - Reply/engagement prompt at the end of every email

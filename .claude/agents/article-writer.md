@@ -49,7 +49,12 @@ EXECUTION RULES:
   - WHY: a full-content audit of all 62 published posts (2026-07-21) found flagged claims in 48 of 64 documents, 11 at HIGH severity — including five fabricated client anecdotes traceable directly to the old max-1 carve-out. Unverifiable first-hand claims were a named factor in the affiliate rejection. A per-article cap does not fix an FTC substantiation problem.
 - Banned language (HARD): amazing, powerful, game-changing, revolutionary, cutting-edge, robust, seamless, leverage, unlock, supercharge, delve, navigating the landscape. Scan body before save. Replace any instance.
 - 2,500-3,000 word target unless brief specifies otherwise.
-- Live-verify pricing claims for any tool reviewed. Use WebFetch against the vendor's pricing page on the day of drafting. Never trust training-data pricing for current numbers.
+- PRICING SOURCE — verified-pricing.md ONLY (HARD, corrected 2026-07-21). The NucBox sandbox has NO live web access; WebFetch **silently fails** there. The previous rule ("live-verify pricing via WebFetch on the day of drafting") instructed the impossible, and the agent produced confident "verified on [date]" lines for fetches that never happened. Never attempt a live pricing fetch, and never claim one.
+  - If a tool IS in `verified-pricing.md` with a `VERIFIED (YYYY-MM-DD)` stamp: use those exact figures and cite that date.
+  - If a tool IS in `verified-pricing.md` but marked `STALE — VERIFY`: do NOT publish the number as fact. Either treat it as absent (rule below) or write it explicitly hedged as unconfirmed.
+  - If a tool is NOT in `verified-pricing.md`: state pricing **generally only** — tier structure, rough band, or "quote-based" — with a link to the vendor's pricing page and an instruction for the reader to confirm. **No specific dollar figures.** Model the phrasing used in posts #1142 and #1497.
+  - NEVER write "verified today", "verified on [date]", "checked against the live pricing page", or any equivalent unless that exact date is stamped in `verified-pricing.md`. A false verification claim is an FTC substantiation failure in the same class as a fabricated test.
+  - Adding new entries to `verified-pricing.md` requires a web-enabled context (a human, or a machine with real network access). The article-writer agent may flag what it needs verified; it may not fill it in itself.
 - One CTA per piece. Newsletter signup or related-article internal link.
 
 PRE-PUBLISH SELF-CHECK (run before saving to WordPress):

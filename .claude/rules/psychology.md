@@ -8,6 +8,44 @@ Does not want to be sold to. Wants to be advised by a peer.
 Responds to loss framing, peer benchmarking, and ROI specificity.
 Ignores feature lists. Cares only about outcomes.
 
+---
+
+## RULE ZERO — NO FIRST-PERSON EXPERIENCE CLAIMS (FTC, PERMANENT)
+
+**Added 2026-07-21 after a full-content audit found fabricated experience claims in 48 of 64 published documents. This rule overrides every persuasion technique below. When a psychology principle and this rule conflict, this rule wins.**
+
+This project has no testing lab, no client roster, and no editorial "we." Under the FTC Endorsement Guides an unsubstantiated experience claim is deceptive regardless of intent, and unverifiable first-hand testing claims were a named factor in the affiliate rejection.
+
+### Never write — no exceptions, no "illustrative" or "composite" versions
+
+- **Testing claims:** "I tested", "we tested", "in our testing", "we compared", "we ran both", "we vet", "we pressure-test", "side-by-side tests", "here is what we found", "our results", "hands-on", "we tried", "field-tested", "one tested pick", "the tools we test".
+- **Invented anecdotes:** "A CEO I know", "A CEO I spoke with", "A founder I worked with", "A founder told me", "An exec I drove", "3 clients switched", "Three founders asked me this month", "leadership teams we have reviewed", "most CEOs we talk to". **The peer-story opener is retired permanently** — it is the single highest-risk pattern on the site.
+- **Unverified precision:** any accuracy rate, percentage, minute count, or head-to-head ranking that could only come from running the tools — "98% accurate by week two", "usable 70% of the time versus 85%", "identified as AI 22 percent less often".
+- **Invented outcome promises:** "the typical result is 15 to 25 percent lower CPA", "teams report a 40 percent lift".
+
+### Write instead
+
+| Instead of | Write |
+|---|---|
+| "We tested X and it..." | "According to X's documentation, it..." |
+| "In our testing, accuracy was 98%" | "X states an accuracy rate of 98%" — or omit |
+| "We compared all four" | "This comparison assesses all four on..." |
+| "A CEO I know cut churn by a third" | "Operators in this category commonly report..." |
+| "Users find it 90% accurate" | "User reviews on G2 and Capterra report..." |
+| "Here is what we found" | "Here is how they compare" |
+
+Approved framings: **"users report"**, **"according to [named vendor]'s documentation"**, **"based on verified reviews on [named site]"**, **"the vendor claims"**, **"public reporting indicates"**.
+
+### Citations must be real, named, and checkable
+
+Never attribute a statistic to an organization (McKinsey, HubSpot, Gartner, Forrester, Litmus, Wyzowl, Nielsen) unless the specific study is named in the brief or in `verified-pricing.md` and can be located. **A fabricated citation is worse than no citation** — it converts an unsourced claim into a false statement of authority. If the source cannot be confirmed: drop the statistic, or write it as an unattributed range with a hedge ("commonly cited figures put this near...").
+
+### The one first-person claim that IS allowed
+
+The author's real background — an Aspen-based operator with years of executive transportation experience — is genuine and may be stated in an author bio or disclosure block. It may **not** be converted into specific client anecdotes, quoted conversations, or attributed outcomes.
+
+---
+
 ## Core Principles — Apply To Every Article
 
 ### 1. Loss Aversion Over Gain Framing
@@ -107,7 +145,7 @@ credibility with skeptical owners, not suspicion.
 - Reply/engagement prompt at the end of every email
 
 ### Conversion Triggers (Universal)
-- Social proof every piece: "A CEO I work with..." or "3 clients switched to..."
+- Social proof every piece — **sourced, never invented**: "Reviews on G2 describe...", "Users on Capterra consistently report...", "According to [vendor]'s published case study...". **Never** "A CEO I work with...", "3 clients switched to...", or any invented anecdote. See the NO FIRST-PERSON EXPERIENCE CLAIMS rule below.
 - Scarcity only when real — never fake urgency
 - Reciprocity: genuine value first, recommendation second
 - Identity framing: "Smart operators already use this" — reader wants to be in that group
@@ -115,8 +153,8 @@ credibility with skeptical owners, not suspicion.
 ### Newsletter Structure
 1. Hook — one sentence, curiosity or loss aversion
 2. Signal — main insight or tool review
-3. Proof — real-world result or CEO insight
-4. Recommendation — one affiliate link as personal pick
+3. Proof — a **cited** figure, a named public source, or an aggregate of user reviews. Never an invented client story or a personal anecdote.
+4. Recommendation — one affiliate link as a reasoned pick
 5. P.S. — forward request or reply prompt
 
 ### Email Hard Rules
@@ -159,7 +197,6 @@ If the new article would repeat any of these, change it.
 ### Rotation Pool for Audience Descriptors
 - "for lean teams that can't add headcount"
 - "for founders still doing too much ops work"
-- "tested by SMB owners this month"
 - "for teams of 5 to 50 doing the work of 150"
 - "for the messy middle — post-MVP, pre-Series A"
 - "no enterprise pricing, no enterprise bloat"
@@ -169,10 +206,11 @@ If the new article would repeat any of these, change it.
 ### Rotation Pool for Closing Lines
 - "Here are the 4 that actually deliver."
 - "Here are the 4 worth your time."
-- "Here is what we tested and what won."
 - "Below: real pricing, honest weaknesses, clear winner."
-- "We picked these 4 because they pay back fast."
+- "Here is how the 4 compare."
 - DROP CLOSER ENTIRELY — let the H2 do the work
+
+**Retired 2026-07-21 (FTC):** "Here is what we tested and what won." and "We picked these 4 because they pay back fast." Both assert first-hand evaluation this project cannot substantiate, and both appeared verbatim in published posts (#1007, #1047).
 
 ### Rotation Pool for Opening Pain Hooks
 - Direct stat with timeframe ("23 hours per open role")

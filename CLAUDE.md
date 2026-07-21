@@ -26,7 +26,20 @@ The full spec lives in `.cursor/rules/aistackscout-content-psychology.mdc`. Key 
 
 ## Content Generation — Proof Format Rotation
 
-All content generation tasks (Twitter, newsletters, articles, LinkedIn) must follow the **Proof Format Rotation Rule** in `.claude/rules/psychology.md`. Key constraints: Twitter — peer-story openers are permanently banned. Not allowed even 1x per week. Educator voice only. Articles and newsletter issues — max 1 peer-story opener ("A CEO I know...", "An exec I drove...") per article and per newsletter issue. Audit the last 7 days before generating any batch. Rotate across 5 proof formats: peer story, numbers-first stat, contrarian observation, pattern call-out, challenge/question hook.
+**Rewritten 2026-07-21. The peer-story opener is now retired in EVERY channel.** The Twitter ban (agent v3 lock) was correct and is extended here to articles, newsletters, and LinkedIn. The previous carve-out allowed "max 1 peer-story opener per article and per newsletter issue" — a full-content audit of all 62 published posts found that carve-out had produced fabricated client anecdotes in five live articles (#1100, #1150, #1220, #1231, #1272) and was a direct contributor to the affiliate rejection. An unverifiable testimonial is an FTC violation at any frequency, so a per-article cap does not fix it. Across 62 articles, "max 1 each" is precisely how five got published.
+
+All content generation tasks (Twitter, newsletters, articles, LinkedIn) must follow **RULE ZERO — NO FIRST-PERSON EXPERIENCE CLAIMS** in `.claude/rules/psychology.md`, which overrides every persuasion technique in that file.
+
+**Openers must be research-based.** Rotate across these 4 formats:
+
+1. **Numbers-first stat** — directional, or cited to a real named source. Never invent a study.
+2. **Contrarian observation** — pure point of view, no story.
+3. **Pattern call-out** — sourced and plural: "Reviews of this category repeatedly flag...", never "Three founders asked me this month."
+4. **Challenge/question hook** — a sharp question, no story.
+
+**Banned in every channel:** any `[role] I [verb]` construction, "we tested / we compared / we vet", invented client outcomes, and citations to McKinsey/HubSpot/Gartner/Forrester/Litmus/Wyzowl-style sources that are not named in the brief. Approved proof framings: "users report", "according to [vendor]'s documentation", "based on verified reviews on [named site]".
+
+**Agent files enforce this too** — see `.claude/agents/article-writer.md` and `.claude/agents/newsletter-builder.md`. Those are the files the pipeline actually loads; a rule change here without a matching change there has no effect.
 
 ## Content Generation — Article Pattern Break
 

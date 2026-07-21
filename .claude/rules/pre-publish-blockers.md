@@ -18,6 +18,18 @@ Before publishing ANY article, run through this checklist. Each item is a blocke
 8. **Rank Math focus keyword** is set and appears in: post title, slug, meta description, and the first H2.
 9. **No scaffolding labels as headings, and no fabricated first-hand testing.** `post_content` must not contain any scaffold stage name as a literal heading — `Hook`, `Bottom line up front`, `BLUF`, `What this is costing you`, `What to look for before you buy`, `Criteria`, `Reviews`, `Tool A/B/C/D`, `Clear winner`, `Next step`. It must also contain no unsubstantiated first-hand testing claims — `I tested`, `we tested`, `in our testing`, `we used it for`, `we ran`, `hands-on`. Full rule: `.claude/rules/article-writer.md`. Verify: `curl -s "$URL" | grep -oiE '<h[23][^>]*>(hook|bottom line|clear winner|reviews|next step|what this is costing|what to look for)[^<]*</h[23]>'` (must return nothing) and `curl -s "$URL" | grep -oiE 'we tested|i tested|in our testing|we used it for|we ran both|hands-on'` (must return nothing).
 
+10. **No first-person experience claims (FTC — added 2026-07-21).** `post_content`, `post_excerpt`, and the Rank Math meta description must contain **zero** of the following:
+    - **Testing claims:** `I tested`, `we tested`, `in our testing`, `we compared`, `we ran both`, `we vet`, `we pressure-test`, `here is what we found`, `our results`, `hands-on`, `we tried`, `field-tested`, `tested pick`, `tools we test`, `we used it for`.
+    - **Invented anecdotes:** `A CEO I`, `a founder I`, `an exec I`, `I spoke with`, `I worked with`, `told me`, `clients switched`, `teams we have reviewed`, `CEOs we talk to`, or any `[role] I [verb]` construction.
+    - **Invented citations:** any statistic attributed to McKinsey, HubSpot, Gartner, Forrester, Litmus, Wyzowl, Nielsen, or Harvard Business Review that is not named in the article brief or `verified-pricing.md`.
+    - **Unverified precision:** accuracy rates or head-to-head percentages that could only come from running the tools, unless attributed to the vendor ("the vendor claims...") or a named public source.
+
+    Full rule: `.claude/rules/article-writer.md`. Verify:
+    ```bash
+    curl -s "$URL" | grep -oiE 'we tested|i tested|in our testing|we compared|we ran both|we vet|pressure-test|here is what we found|hands-on|field-tested|tested pick|tools we test|a ceo i|a founder i|an exec i|i spoke with|i worked with|clients switched|ceos we talk to'
+    ```
+    Must return nothing.
+
 ## How to verify before publish
 
 Run the verification commands below before flipping post_status to `publish`. Failure on any check is a blocker.

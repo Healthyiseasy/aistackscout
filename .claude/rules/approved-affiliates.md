@@ -23,7 +23,7 @@ Entry format when adding:
 1. Add the entry to the "Approved" section above with the approval date and network.
 2. Create the Pretty Link in WP admin (`Pretty Links → Add New`).
 3. Verify the slug resolves to the correct merchant URL before any article links to it.
-4. The disclosure block at the top of the post (handled by Code Snippets) uses always-accurate wording and displays on every post. It does not need to be suppressed when no approved tools are featured.
+4. The disclosure block at the top of the post (handled by Code Snippets) renders on every post site-wide. `_suppress_ftc_disclosure` must always equal `0` regardless of whether the article contains affiliate links — no exceptions.
 
 ## Audit Trail
 

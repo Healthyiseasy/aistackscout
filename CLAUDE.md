@@ -62,6 +62,10 @@ Before drafting any article, follow the **Article Pattern Break Rule** in `.clau
 
 Never emit the stage names above (Hook, Bottom line up front, What this is costing you, Criteria, Reviews, Clear winner, Next step, Tool A/B/C/D) as literal `H2`/`H3` headings in published `post_content`. They were leaking into live posts as headings — that is a hard reject. Full rule and the descriptive-heading guidance live in `.claude/rules/article-writer.md`; it is enforced as pre-publish blocker 9 in `.claude/rules/pre-publish-blockers.md`.
 
+## Article Length
+
+Article soft target is 2,000 words. Hard cap is 2,200. Never exceed 2,200. If an editorial change pushes the article over 2,200, trim in ONE pass before pushing to WP — never multiple rounds. Target 2,000 to leave a 200-word buffer for post-draft edits.
+
 ## Pre-Publish Blockers — REJECT publish if any are missing
 
 Canonical version with verification commands lives in `.claude/rules/pre-publish-blockers.md`. Quick reference:

@@ -25,7 +25,7 @@ OPERATING MODES (CURRENT):
   - Zero (aff) inline markers
   - Direct homepage URLs only when linking to tools
   - Single CTA points to internal action. Newsletter signup, related article, or lead magnet.
-  - Per pre-publish-blockers.md FTC AUTO-FLIP RULE 2: _suppress_ftc_disclosure = 1 in post meta
+  - _suppress_ftc_disclosure = 0 in post meta (FTC disclosure is ON site-wide; no post ever suppresses)
 - IMAGE LIBRARY MODE active until told otherwise:
   - Featured image: NOT auto-assigned by agent. User uploads and assigns featured image manually after reviewing draft per MODE 2 (Manual Review). Agent leaves featured_media field empty on initial post creation.
   - Suggest featured image category + filename pattern + alt text in handoff notes only
@@ -48,7 +48,7 @@ EXECUTION RULES:
   - Approved proof framings: "users report", "according to [vendor]'s documentation", "based on verified reviews on [named site]", "the vendor claims", "public reporting indicates".
   - WHY: a full-content audit of all 62 published posts (2026-07-21) found flagged claims in 48 of 64 documents, 11 at HIGH severity — including five fabricated client anecdotes traceable directly to the old max-1 carve-out. Unverifiable first-hand claims were a named factor in the affiliate rejection. A per-article cap does not fix an FTC substantiation problem.
 - Banned language (HARD): amazing, powerful, game-changing, revolutionary, cutting-edge, robust, seamless, leverage, unlock, supercharge, delve, navigating the landscape. Scan body before save. Replace any instance.
-- 2,500-3,000 word target unless brief specifies otherwise.
+- Word count: minimum 1,500 words, target 2,000 words, hard maximum 2,200 words. Never exceed 2,200 unless the article is a roundup covering 10+ tools.
 - PRICING SOURCE — verified-pricing.md ONLY (HARD, corrected 2026-07-21). The NucBox sandbox has NO live web access; WebFetch **silently fails** there. The previous rule ("live-verify pricing via WebFetch on the day of drafting") instructed the impossible, and the agent produced confident "verified on [date]" lines for fetches that never happened. Never attempt a live pricing fetch, and never claim one.
   - If a tool IS in `verified-pricing.md` with a `VERIFIED (YYYY-MM-DD)` stamp: use those exact figures and cite that date.
   - If a tool IS in `verified-pricing.md` but marked `STALE — VERIFY`: do NOT publish the number as fact. Either treat it as absent (rule below) or write it explicitly hedged as unconfirmed.
@@ -58,11 +58,19 @@ EXECUTION RULES:
 - One CTA per piece. Newsletter signup or related-article internal link.
 
 PRE-PUBLISH SELF-CHECK (run before saving to WordPress):
-- Title under 60 chars, single thought
+- Title rules (LOCKED 2026-05-16, see memory/article_title_rules.md):
+  - Max 6 words. Hard ceiling. Hyphenated terms count as 1 word.
+  - ≤60 chars and single-thought rule still apply (6-word rule usually tighter).
+  - Audit last published article's first word + opener type via wp_get_posts(status=publish, per_page=1) BEFORE naming this one.
+  - No consecutive titles starting with a number. If last started with a digit, this one cannot.
+  - Never two titles with the same first word in a row.
+  - Rotate opener type across 5 categories: question / statement / name-drop / verb-first / contrast.
+  - Focus keyword in title is NO LONGER required. Slug + meta description + first H2 carry it for SEO. Title prioritizes editorial punch.
+  - Approved templates: "The AI Stack CEOs Actually Use" / "Stop Buying the Wrong AI Tools" / "What Replaces Your Operations Team" / "Claude vs Everything Else" / "The Tools That Pay for Themselves"
 - Body starts at H2, no in-body H1
-- /go/ link audit: in NO-AFFILIATE mode, body must contain ZERO /go/ links and ZERO (aff) markers. When affiliate mode is active, every /go/ link must use the absolute URL form https://aistackscout.com/go/<slug> (never relative). If any /go/ or (aff) is present, the FTC AUTO-FLIP RULE fires and _suppress_ftc_disclosure must equal 0.
+- /go/ link audit: in NO-AFFILIATE mode, body must contain ZERO /go/ links and ZERO (aff) markers. When affiliate mode is active, every /go/ link must use the absolute URL form https://aistackscout.com/go/<slug> (never relative). _suppress_ftc_disclosure must always equal 0 regardless — FTC disclosure is ON site-wide.
 - Every /go/ slug referenced in body must exist in Pretty Links and resolve to a non-empty target. Verify via Pretty Links admin or DB read — never test-click. If any slug is unverified, flag to Mr. Rubio and mark NOT READY. (N/A while NO-AFFILIATE mode is active.)
-- Link validation: every outbound URL in the body must be tested for resolution (200 OK, not 404, not timeout). Run a quick WebFetch HEAD-equivalent on each unique non-AIStackScout URL. If any URL is dead, flag to Mr. Rubio and mark NOT READY.
+- Link validation — FLAG ONLY, never claim to have checked (corrected 2026-07-24, same root cause as the PRICING SOURCE rule above). The NucBox sandbox has NO live web access: WebFetch is not in this agent's toolset and outbound curl from Bash fails silently. Never attempt a live resolution check, and never report a URL as "verified", "resolves", "200 OK", or "checked". Instead, list every unique non-AIStackScout outbound URL in the handoff notes under "NEEDS LINK VALIDATION" and mark the draft NOT READY until a web-enabled context (a human, or a machine with real network access) confirms them. Prefer linking only to vendor homepages, which are the least likely to rot.
 - 2+ internal links to AIStackScout articles, absolute URLs
 - No banned audience descriptors per psychology.md Article Pattern Break Rule
 - Closer phrasing follows psychology.md pattern-break rotation pool. Do not repeat the previous article's closer.
@@ -70,24 +78,27 @@ PRE-PUBLISH SELF-CHECK (run before saving to WordPress):
 - Each reviewed tool has pricing + honest weakness + price anchor + homepage link
 - Clear winner named with CEO-grounded reasoning
 - Meta description 155-165 chars with focus keyword
-- Word count inside 2,500-3,000 range
-- FTC AUTO-FLIP RULE check: scan body for /go/ and (aff). Set _suppress_ftc_disclosure accordingly per pre-publish-blockers.md
+- Word count between 1,500 and 2,200 words (2,000 target). Roundups covering 10+ tools may exceed 2,200.
+- FTC disclosure check: _suppress_ftc_disclosure must equal 0 on every post. FTC disclosure is ON site-wide; no post ever suppresses it.
 
 WORDPRESS PUBLISH WORKFLOW (when user says "push to WordPress" or "publish"):
 1. Save full article HTML to drafts/YYYY-MM-DD-slug.md first
-2. Run FTC AUTO-FLIP RULE scan on the body. Determine correct _suppress_ftc_disclosure value (0 or 1).
+2. Confirm _suppress_ftc_disclosure = 0 (always, no exceptions — FTC disclosure ON site-wide).
 3. Use mcp__aistackscout__wp_create_post with status=draft (NEVER status=publish on first push)
-4. Set slug, focus keyword, meta description, _suppress_ftc_disclosure value from step 2
+4. Set slug, focus keyword, meta description, _suppress_ftc_disclosure = 0
 5. After save, use mcp__aistackscout__wp_add_post_terms with append=false for category (wp_update_post.post_category silently no-ops on this site. DOCUMENTED BUG.)
-6. Return post ID, admin edit URL, preview URL, final permalink, AND the _suppress_ftc_disclosure value set
+6. Return post ID, admin edit URL, preview URL, final permalink, AND confirmation that _suppress_ftc_disclosure was set to 0
 7. User adds featured image and publishes manually in WP admin
 
 OUTPUT FORMAT (after draft is complete):
 1. File path of saved draft
 2. Pre-publish self-check table. All items with pass or fail
-3. FTC AUTO-FLIP RULE result. /go/ count, (aff) count, _suppress_ftc_disclosure value
+3. FTC disclosure status. /go/ count, (aff) count, _suppress_ftc_disclosure value (must be 0 — site-wide policy)
 4. Recommended featured image category + filename pattern + alt text (library mode)
 5. Suggested newsletter angle for newsletter-builder
 6. Any flags before publish
+
+NO SCAFFOLDING LABELS IN OUTPUT (HARD):
+The published article must NEVER contain internal structural labels as headings or visible text. Never output the words "Hook", "Bottom Line Up Front", "BLUF", "Pain", "Cost of Inaction", "Criteria", "Solution", or "Verdict" as H2/H3 headings or anywhere a reader can see them — these are internal scaffolding only. The opening hook paragraph sits directly under the title with NO heading above it. Every heading must be descriptive and reader-facing, specific to the article's actual subject. If a verdict-upfront section needs a heading, use a reader-facing label like "The Short Answer" or "Bottom Line" — never "BLUF" or "Bottom Line Up Front".
 
 If any rule file is missing, STOP and tell Mr. Rubio which file is missing rather than guess.

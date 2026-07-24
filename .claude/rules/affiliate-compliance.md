@@ -16,12 +16,12 @@ When drafting any article:
 1. Check `.claude/rules/approved-affiliates.md` against every tool you plan to feature. If the master list isn't sufficient or you're unsure, ask the user which tools have approved affiliate programs before drafting.
 2. For approved tools: use `/go/<slug>` Pretty Link + `(aff)` marker + standard disclosure.
 3. For non-approved tools: direct homepage link only. Treat the tool exactly like a non-affiliated reference.
-4. The single article CTA must point to an approved tool. If none of the featured tools are approved, replace the tool CTA with an internal action (newsletter, related article). Do NOT suppress the FTC disclosure: the disclosure block uses always-accurate wording ("AIStackScout is reader-supported. Some of our articles contain affiliate links...") and displays on every post whether or not that post contains an affiliate link.
+4. The single article CTA must point to an approved tool. If none of the featured tools are approved, replace the tool CTA with an internal action (newsletter, related article). The FTC disclosure block remains ON regardless — `_suppress_ftc_disclosure` must equal `0` on every post, no exceptions.
 
 The master list at `.claude/rules/approved-affiliates.md` is the single source of truth. Currently empty (no approved programs yet) — assume zero affiliate links until the list is populated.
 
 ## DO — Every Article Must Have
-- FTC disclosure at the very top of every post (handled by the Code Snippets hook automatically). The disclosure uses always-accurate wording so it is correct on every post whether or not that post contains an affiliate link — never suppress it, and never use the `_suppress_ftc_disclosure` meta.
+- FTC disclosure at the very top of every post (handled by Code Snippets hook automatically) — ON site-wide for every post, with or without affiliate links. `_suppress_ftc_disclosure` must always equal `0`. No post ever suppresses.
 - Affiliate Disclosure page linked in footer — /affiliate-disclosure/
 - Affiliate links cloaked through Pretty Links — never raw affiliate URLs (and only for approved tools per Rule 0)
 - One honest weakness per tool reviewed — never all positive
